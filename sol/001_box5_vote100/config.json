@@ -1,0 +1,21 @@
+{
+  "experiment": "001_box5_vote100",
+  "box_width_m": 5.0,
+  "vote_window_frames": 100,
+  "motion_lag_frames": 10,
+  "minimum_motion_tracks": 10,
+  "max_player_motion_mps": 12.0,
+  "outside_margin_m": 0.5,
+  "outside_confirm_frames": 3,
+  "slow_players_mps": 0.7,
+  "slow_players_confirm_frames": 25,
+  "stationary_ball_mps": 0.35,
+  "stationary_ball_confirm_frames": 25,
+  "set_piece_stationary_confirm_frames": 15,
+  "missing_ball_confirm_frames": 50,
+  "restart_ball_mps": 0.8,
+  "restart_ball_confirm_frames": 3,
+  "restart_players_mps": 1.8,
+  "restart_players_confirm_frames": 12,
+  "bootstrap_draws": 1000
+}

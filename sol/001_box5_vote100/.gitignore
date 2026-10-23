@@ -1,0 +1,10 @@
+.ipynb_checkpoints/
+__pycache__/
+*.csv
+*.npy
+*.npz
+*.pkl
+*.log
+*.executed.ipynb
+outputs/
+reports/
