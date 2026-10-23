@@ -62,3 +62,9 @@ __pycache__/
 venv/
 env/
 .DS_Store
+
+# Jupyter checkpoint copies
+.ipynb_checkpoints/
+
+# Local exploratory notebook (not a model experiment)
+/just_proba.ipynb
