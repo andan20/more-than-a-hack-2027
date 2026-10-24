@@ -1,0 +1,7 @@
+{
+  "lag_frames": 10,
+  "weight_scale_m": 25.0,
+  "window_frames": 100,
+  "threshold_mps": 1.0,
+  "confirm_frames": 5
+}

@@ -1,0 +1,7 @@
+{
+  "mass_weight": 0.25,
+  "box_width_m": 3.0,
+  "nearby_window_frames": 25,
+  "threshold": 0.35,
+  "confirm_frames": 15
+}
