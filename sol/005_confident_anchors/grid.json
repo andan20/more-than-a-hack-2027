@@ -1,0 +1,27 @@
+{
+  "radius_m": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "opponent_margin_m": [
+    1.0,
+    2.0,
+    4.0
+  ],
+  "min_confident_frames": [
+    3,
+    8,
+    15
+  ],
+  "evidence_window_frames": [
+    1,
+    5,
+    15
+  ],
+  "boundary_method": [
+    "midpoint",
+    "weighted",
+    "consistent"
+  ]
+}
