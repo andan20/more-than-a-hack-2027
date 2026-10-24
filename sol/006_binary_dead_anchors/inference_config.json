@@ -1,0 +1,41 @@
+{
+  "architecture": "Transformer(2 layers,64 dim,4 heads)+GRU(64)",
+  "input_features": 11,
+  "outputs": [
+    "LIVE",
+    "D"
+  ],
+  "threshold": 0.5,
+  "min_dead_frames": 25,
+  "max_live_gap_frames": 10,
+  "anchor_config": {
+    "radius_m": 1.0,
+    "opponent_margin_m": 2.0,
+    "min_confident_frames": 8,
+    "evidence_window_frames": 15,
+    "boundary_method": "consistent"
+  },
+  "training_config": {
+    "seed": 42,
+    "epochs": 12,
+    "seq_len": 125,
+    "smooth_weight": 0.05,
+    "learning_rate": 0.0003,
+    "device": "cpu",
+    "d_model": 64,
+    "heads": 4,
+    "layers": 2,
+    "gru_hidden": 64,
+    "dropout": 0.1,
+    "features_version": 1,
+    "smoke": false,
+    "target": "binary_live_dead",
+    "weighted_ce": true,
+    "dead_threshold": 0.5,
+    "min_dead_frames": 25,
+    "max_live_gap_frames": 10,
+    "torch": "2.11.0",
+    "numpy": "2.3.5",
+    "python": "3.13.9"
+  }
+}
