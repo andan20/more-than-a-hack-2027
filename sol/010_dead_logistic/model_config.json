@@ -1,0 +1,223 @@
+{
+  "experiment": "010_dead_logistic",
+  "configs": [
+    {
+      "name": "c0p01",
+      "kind": "logistic",
+      "C": 0.01
+    },
+    {
+      "name": "c0p1",
+      "kind": "logistic",
+      "C": 0.1
+    },
+    {
+      "name": "c1p0",
+      "kind": "logistic",
+      "C": 1.0
+    },
+    {
+      "name": "c10p0",
+      "kind": "logistic",
+      "C": 10.0
+    }
+  ],
+  "thresholds": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.925,
+    0.95,
+    0.97,
+    0.98,
+    0.99,
+    0.995,
+    0.999
+  ],
+  "minimum_durations": [
+    0,
+    25,
+    50,
+    100
+  ],
+  "precision_targets": [
+    0.95,
+    0.99
+  ],
+  "min_predicted_frames": 100,
+  "feature_names": [
+    "ball_seen",
+    "ball_x",
+    "ball_y",
+    "ball_touchline_distance",
+    "ball_goal_line_distance",
+    "ball_corner_distance",
+    "ball_outside",
+    "clean_player_count",
+    "excluded_player_count",
+    "keeper_count",
+    "nearest_outfield",
+    "nearest_keeper",
+    "players_near_ball_2",
+    "players_near_ball_5",
+    "players_near_ball_10",
+    "team0_count",
+    "team0_center0",
+    "team0_spread0",
+    "team0_center1",
+    "team0_spread1",
+    "team0_ball_distance",
+    "team1_count",
+    "team1_center0",
+    "team1_spread0",
+    "team1_center1",
+    "team1_spread1",
+    "team1_ball_distance",
+    "ball_speed_5",
+    "ball_speed_25",
+    "ball_speed_50",
+    "median_player_speed",
+    "slow_player_fraction",
+    "fast_player_fraction",
+    "ball_missing_seconds",
+    "ball_stationary_seconds",
+    "ball_outside_seconds",
+    "ball_seen_mean_1s",
+    "ball_seen_std_1s",
+    "ball_speed_25_mean_1s",
+    "ball_speed_25_std_1s",
+    "median_player_speed_mean_1s",
+    "median_player_speed_std_1s",
+    "slow_player_fraction_mean_1s",
+    "slow_player_fraction_std_1s",
+    "nearest_outfield_mean_1s",
+    "nearest_outfield_std_1s",
+    "clean_player_count_mean_1s",
+    "clean_player_count_std_1s",
+    "ball_touchline_distance_mean_1s",
+    "ball_touchline_distance_std_1s",
+    "ball_seen_mean_3s",
+    "ball_seen_std_3s",
+    "ball_speed_25_mean_3s",
+    "ball_speed_25_std_3s",
+    "median_player_speed_mean_3s",
+    "median_player_speed_std_3s",
+    "slow_player_fraction_mean_3s",
+    "slow_player_fraction_std_3s",
+    "nearest_outfield_mean_3s",
+    "nearest_outfield_std_3s",
+    "clean_player_count_mean_3s",
+    "clean_player_count_std_3s",
+    "ball_touchline_distance_mean_3s",
+    "ball_touchline_distance_std_3s",
+    "ball_seen_mean_5s",
+    "ball_seen_std_5s",
+    "ball_speed_25_mean_5s",
+    "ball_speed_25_std_5s",
+    "median_player_speed_mean_5s",
+    "median_player_speed_std_5s",
+    "slow_player_fraction_mean_5s",
+    "slow_player_fraction_std_5s",
+    "nearest_outfield_mean_5s",
+    "nearest_outfield_std_5s",
+    "clean_player_count_mean_5s",
+    "clean_player_count_std_5s",
+    "ball_touchline_distance_mean_5s",
+    "ball_touchline_distance_std_5s",
+    "ball_seen_mean_10s",
+    "ball_seen_std_10s",
+    "ball_speed_25_mean_10s",
+    "ball_speed_25_std_10s",
+    "median_player_speed_mean_10s",
+    "median_player_speed_std_10s",
+    "slow_player_fraction_mean_10s",
+    "slow_player_fraction_std_10s",
+    "nearest_outfield_mean_10s",
+    "nearest_outfield_std_10s",
+    "clean_player_count_mean_10s",
+    "clean_player_count_std_10s",
+    "ball_touchline_distance_mean_10s",
+    "ball_touchline_distance_std_10s"
+  ],
+  "hybrid_public_weight": 0.75,
+  "guard_frames": 500,
+  "seed": 42,
+  "weak_masks_sha256": {
+    "training_weak_D_mask.npy": "3a811d9ec7fd1a9d79d1aa2d9d68904a81b306bf6aadf92963b6231d2e855676",
+    "training_weak_LIVE_mask.npy": "a17901866f6be7f8cc5f54022e9a8d58c9bcd098eb247adbf133001c5c8c2dad"
+  },
+  "features_sha256": "14cb2be85b5b584b763a119f050d00e636f9fa88617de9df643f64b19bc652c4",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "torch": "2.11.0",
+    "tqdm": "4.67.1"
+  },
+  "fitted_models": {
+    "weak": {
+      "file": "weak_model.pkl",
+      "parameters": {
+        "name": "c0p01",
+        "kind": "logistic",
+        "C": 0.01
+      },
+      "precision_policies": {
+        "0.95": {
+          "threshold": 0.5,
+          "min_dead_frames": 100,
+          "feasible": true
+        },
+        "0.99": {
+          "threshold": 0.95,
+          "min_dead_frames": 0,
+          "feasible": true
+        }
+      },
+      "fixed_reference_policy": {
+        "threshold": 0.5,
+        "min_dead_frames": 25,
+        "max_live_gap_frames": 10
+      },
+      "public_labels_used_for_training": false,
+      "public_training_end_exclusive": null,
+      "sha256": "1a19ce1f7adf97ea53c5cb24c26bac79e3c566e4404b08261eb1351e37c91aa7"
+    },
+    "hybrid": {
+      "file": "hybrid_model.pkl",
+      "parameters": {
+        "name": "c0p01",
+        "kind": "logistic",
+        "C": 0.01
+      },
+      "precision_policies": {
+        "0.95": {
+          "threshold": 1.1,
+          "min_dead_frames": 25,
+          "feasible": false
+        },
+        "0.99": {
+          "threshold": 1.1,
+          "min_dead_frames": 25,
+          "feasible": false
+        }
+      },
+      "fixed_reference_policy": {
+        "threshold": 0.5,
+        "min_dead_frames": 25,
+        "max_live_gap_frames": 10
+      },
+      "public_labels_used_for_training": true,
+      "public_training_end_exclusive": 16685,
+      "sha256": "4bcebce4560068ebd1b373708322f9b8877e75d9a122155bde9af1d25b52804a"
+    }
+  }
+}

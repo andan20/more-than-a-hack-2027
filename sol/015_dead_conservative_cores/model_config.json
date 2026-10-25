@@ -1,0 +1,72 @@
+{
+  "parents": [
+    "009_broadcast_weak_boosting",
+    "010_dead_logistic",
+    "011_dead_forests",
+    "012_dead_boost_sweep",
+    "013_dead_mlp"
+  ],
+  "selected": {
+    "0.95": {
+      "model": "mean",
+      "threshold": 1.1,
+      "min_dead_frames": 25,
+      "margin_frames": 0,
+      "feasible": false
+    },
+    "0.99": {
+      "model": "mean",
+      "threshold": 1.1,
+      "min_dead_frames": 25,
+      "margin_frames": 0,
+      "feasible": false
+    }
+  },
+  "thresholds": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.925,
+    0.95,
+    0.97,
+    0.98,
+    0.99,
+    0.995,
+    0.999
+  ],
+  "minimum_durations": [
+    0,
+    25,
+    50,
+    100
+  ],
+  "erosion_frames": [
+    0,
+    25,
+    50,
+    100
+  ],
+  "selection_range": [
+    11185,
+    17185
+  ],
+  "diagnostic_range": [
+    17185,
+    18685
+  ],
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "torch": "2.11.0",
+    "tqdm": "4.67.1"
+  }
+}
