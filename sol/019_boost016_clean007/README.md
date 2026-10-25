@@ -1,0 +1,9 @@
+# 019 — 016 D + 007 H/A, complete H/A/D output
+
+D: frozen public_model.pkl from 016, threshold 0.5, bridge LIVE gaps <=10 frames, remove D shorter than 25 frames. No refitting or threshold search. H/A: 007 cleaned confident anchors and nearest defensive-line rule; configuration frozen from 005/007. Recompute H/A with the NEW D barriers, never reuse the old D heuristic as final output.
+
+007 selected by saved conditional H/A macroF1 on true H/A frames in the first four public minutes, before assessing the hybrid. Offline contexts and previously explored labels mean this is diagnostic selection, not an independent test.
+
+X removal is an algorithmic rule, not a display change: extend first/last valid H/A anchor to the ends of each LIVE interval. If the interval has no confident anchors, use the closer observed cleaned team to the ball and temporally fill missing evidence inside that interval. If no such observation exists, use the closest-time available team evidence in the SAME half, possibly across a D boundary. This last fallback is explicitly logged as uncertain. No coordinate observations are fabricated. Outside the official half spans assign D (pre-match/halftime/post-match). Thus all 199319 frames have H/A/D, zero X.
+
+All inference code in this notebook. Reuse preparation/functions from parent notebooks 007 and 016 without running their training/selection cells. Requires original local assets and feature preparation 008/broadcast alignment (sol/010_dead_logistic/prepare_broadcast_labels.ipynb); models 009/010/016 remain unchanged. Outputs and review video stay local_review. Approved libraries only. The public prefix was used to train 016; the last minute was excluded from its fit but has been repeatedly inspected. Full-match offline input context is used. Public-five-minute metrics mix training and diagnostics; full-match quality is unknown.

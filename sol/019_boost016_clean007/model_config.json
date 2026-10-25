@@ -1,0 +1,17 @@
+{
+  "D_parent": "016_dead_broadcast_features",
+  "D_model": "public_model.pkl",
+  "threshold": 0.5,
+  "min_dead_frames": 25,
+  "max_live_gap_frames": 10,
+  "HA_parent": "007_clean_anchors",
+  "HA_config": {
+    "radius_m": 1.0,
+    "opponent_margin_m": 2.0,
+    "min_confident_frames": 8,
+    "evidence_window_frames": 15,
+    "boundary_method": "consistent"
+  },
+  "no_X_policy": "interval anchor extension, nearest-ball fallback, same-half temporal fallback; D outside halves",
+  "model_sha256": "f7d715d3ae9005a0c9d0a22dbbabf921085dc93e81ca223eee6cad6f40c80e34"
+}
