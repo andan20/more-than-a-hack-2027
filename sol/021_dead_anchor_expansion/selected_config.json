@@ -1,0 +1,22 @@
+{
+  "primary_precision_target": 0.99,
+  "selection_range": [
+    11185,
+    17185
+  ],
+  "configs": {
+    "0.99": {
+      "seed_source": "broadcast_plus016",
+      "radius_seconds": 2,
+      "evidence_threshold": 0.65,
+      "motion_weight": 0.0
+    },
+    "0.95": {
+      "seed_source": "broadcast_plus016",
+      "radius_seconds": 2,
+      "evidence_threshold": 0.5,
+      "motion_weight": 0.0
+    }
+  },
+  "selection_context": "isolated prefix; no future validation anchors; 016 trained on prefix; repeated diagnostic labels"
+}

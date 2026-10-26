@@ -1,0 +1,43 @@
+{
+  "D_source": "broadcast and optional high-confidence 016 cores with constrained expansion",
+  "primary_precision_target": 0.99,
+  "expansion": {
+    "seed_source": "broadcast_plus016",
+    "radius_seconds": 2,
+    "evidence_threshold": 0.65,
+    "motion_weight": 0.0
+  },
+  "secondary_expansion": {
+    "seed_source": "broadcast_plus016",
+    "radius_seconds": 2,
+    "evidence_threshold": 0.5,
+    "motion_weight": 0.0
+  },
+  "smoothing_frames": 25,
+  "live_barrier": {
+    "probability_max": 0.15,
+    "ball_speed_min": 3.0,
+    "player_speed_min": 1.0,
+    "duration_frames": 15
+  },
+  "seed_min_frames": 100,
+  "seed_gap_frames": 10,
+  "secondary_seed_probability": 0.9,
+  "secondary_seed_min_frames": 25,
+  "HA_parent": "020_penalty_gated_corridor",
+  "HA_config": {
+    "radius_m": 1.0,
+    "opponent_margin_m": 2.0,
+    "min_confident_frames": 8,
+    "evidence_window_frames": 15,
+    "boundary_method": "consistent"
+  },
+  "corridor_min_own_goal_depth_m": 16.5,
+  "outside_half_label": "D",
+  "X_count": 0,
+  "selection_range": [
+    11185,
+    17185
+  ],
+  "probability_sha256": "23249ddd2d3cab016f38e4c617655e54d0fc33eb113a91c7c1ace17fa4b82044"
+}
