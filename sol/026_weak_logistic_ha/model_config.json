@@ -1,0 +1,48 @@
+{
+  "experiment": "026_weak_logistic_ha",
+  "models": [
+    {
+      "name": "logistic_c001",
+      "kind": "logistic",
+      "C": 0.01
+    },
+    {
+      "name": "logistic_c01",
+      "kind": "logistic",
+      "C": 0.1
+    },
+    {
+      "name": "logistic_c1",
+      "kind": "logistic",
+      "C": 1.0
+    }
+  ],
+  "thresholds": [
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    0.95,
+    0.99,
+    0.995
+  ],
+  "training_samples": 10597,
+  "training_D": 2575,
+  "training_LIVE": 8022,
+  "raw_features": 92,
+  "input_width": 155,
+  "selection_sha256": "b9ef7f9ec25eb909dbfda825948d069fdd5b728c8160b105502d4356d30a8dc9",
+  "public_exclusion": [
+    10685,
+    19185
+  ],
+  "seed": 42,
+  "context": "D: identical 022 weak training outside public + 20s guard; fixed architecture/threshold sweep; H/A historically public-selected; full offline context; public-ranked diagnostics, not independent test",
+  "preprocessing": "training-only median imputation + missing indicators; standardization for MLP/logistic",
+  "MLP_optimizer": "AdamW lr=.001, weighted BCEWithLogits, batch256, 80 fixed epochs, seed42",
+  "duration_filter": {
+    "max_live_gap_frames": 10,
+    "min_dead_frames": 25
+  }
+}
