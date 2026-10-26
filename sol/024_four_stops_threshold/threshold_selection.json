@@ -1,0 +1,10 @@
+{
+  "threshold": 0.991,
+  "target_runs": 4,
+  "grid_start": 0.5,
+  "grid_step": 0.001,
+  "grid_end": 1.0,
+  "selection": "first ascending grid threshold with exactly 4 filtered public-prefix D runs",
+  "public_reference_count_used": true,
+  "public_frame_labels_used_for_fit": false
+}
