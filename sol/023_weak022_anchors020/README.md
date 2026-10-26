@@ -1,0 +1,11 @@
+# 023 — Weak D from 022 + frozen H/A from 020
+
+D: frozen 022 HistGradientBoosting trained on expanded broadcast weak labels outside the public five minutes plus 20-second guards. Identical threshold .5, LIVE gap <=10 frames, D duration >=25 frames. No 016 predictions, weights, or public-supervised parents. / D: неизменный бустинг 022 на слабых broadcast-метках вне публичного окна с отступами; порог и фильтр неизменны, 016 не используется.
+
+H/A: frozen confident/contested rules from 007/020 with cleaned tracking and direct corridor assignment only when the chosen team's line is beyond 16.5 m from its own goal. Same-team anchors bridge without a turnover; missing labels filled from nearest-time evidence within live intervals, then same-half evidence. No X remains; outside official half spans D. / H/A: замороженные правила 007/020, чистка трекинга, коридор с поправкой на штрафную, заполнение неопределённостей без X.
+
+IMPORTANT: this is NOT an entirely label-independent pipeline. H/A parameters and strategy were previously selected using the public prefix. They are merely held fixed here. D does not directly use public labels, but all experiments have historical research adaptation. Generalization cannot be established on the repeatedly inspected five minutes. / ВАЖНО: H/A ранее выбирались по публичным меткам. Здесь нового подбора нет, но всю цепочку нельзя называть независимой от разметки. Обобщение на полном матче неизвестно.
+
+Run All with local 008 feature cache, trusted sol/022_broadcast_expanded_weak/model.pkl, ATD assets and 007 notebook/config. This notebook performs inference only; it does not train models or search settings. Public labels are loaded only after the final predictions have been saved and hashed. Full offline context. Outputs and executed notebook remain in local_review/experiments/023_weak022_anchors020. / Run All с локальными данными и артефактами; только инференс, публичные метки читаются после сохранения и хеширования прогнозов. Полный офлайн-контекст.
+
+Only clean code/configuration is published; restricted data, predictions, metrics and videos remain local. D weights are referenced from 022, not duplicated. / Публикуем только код и конфигурацию, веса D берём из 022; результаты локальные.

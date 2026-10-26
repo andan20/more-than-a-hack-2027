@@ -1,0 +1,22 @@
+{
+  "D_parent": "022_broadcast_expanded_weak",
+  "D_model": "model.pkl",
+  "D_public_supervision": false,
+  "HA_historical_public_selection": true,
+  "threshold": 0.5,
+  "min_dead_frames": 25,
+  "max_live_gap_frames": 10,
+  "HA_parent": "007_clean_anchors",
+  "HA_config": {
+    "radius_m": 1.0,
+    "opponent_margin_m": 2.0,
+    "min_confident_frames": 8,
+    "evidence_window_frames": 15,
+    "boundary_method": "consistent"
+  },
+  "corridor_min_own_goal_depth_m": 16.5,
+  "corridor_comparison": "strictly_greater",
+  "corridor_boundary_tolerance_m": 1e-09,
+  "no_X_policy": "interval anchor extension, nearest-ball fallback, same-half temporal fallback; D outside halves",
+  "model_sha256": "c8abd2e2f37f493faf81d769fbab62cc9140fc4bc4941d503188386851f7def6"
+}
