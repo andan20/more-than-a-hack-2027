@@ -1,0 +1,5 @@
+{
+  "name": "logistic_c1",
+  "kind": "logistic",
+  "C": 1.0
+}

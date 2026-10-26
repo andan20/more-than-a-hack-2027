@@ -1,0 +1,64 @@
+{
+  "experiment": "028_allweak_mlp_ha",
+  "models": [
+    {
+      "name": "mlp16",
+      "kind": "mlp",
+      "hidden": [
+        16
+      ],
+      "dropout": 0.0,
+      "epochs": 80,
+      "weight_decay": 0.001
+    },
+    {
+      "name": "mlp32_16",
+      "kind": "mlp",
+      "hidden": [
+        32,
+        16
+      ],
+      "dropout": 0.1,
+      "epochs": 80,
+      "weight_decay": 0.001
+    },
+    {
+      "name": "mlp64_32",
+      "kind": "mlp",
+      "hidden": [
+        64,
+        32
+      ],
+      "dropout": 0.1,
+      "epochs": 80,
+      "weight_decay": 0.001
+    }
+  ],
+  "thresholds": [
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    0.95,
+    0.99,
+    0.995
+  ],
+  "training_samples": 11378,
+  "training_D": 2706,
+  "training_LIVE": 8672,
+  "raw_features": 92,
+  "input_width": 155,
+  "selection_sha256": "3d679a3290b488347c08163cc43fb0decf6fd32a772542ba4bfe68de0ac77ee5",
+  "public_exclusion": [],
+  "public_inputs_used_for_weak_training": true,
+  "reference_labels_used_for_training": false,
+  "seed": 42,
+  "context": "D: automatic broadcast weak training on all half-block frames INCLUDING public inputs; NO reference labels in fitting; same fixed model/threshold sweep as 025-027; H/A historically public-selected; full offline context; transductive public diagnostics, not independent test",
+  "preprocessing": "training-only median imputation + missing indicators; standardization for MLP/logistic",
+  "MLP_optimizer": "AdamW lr=.001, weighted BCEWithLogits, batch256, 80 fixed epochs, seed42",
+  "duration_filter": {
+    "max_live_gap_frames": 10,
+    "min_dead_frames": 25
+  }
+}

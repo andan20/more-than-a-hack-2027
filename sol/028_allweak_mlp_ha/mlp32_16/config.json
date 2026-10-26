@@ -1,0 +1,11 @@
+{
+  "name": "mlp32_16",
+  "kind": "mlp",
+  "hidden": [
+    32,
+    16
+  ],
+  "dropout": 0.1,
+  "epochs": 80,
+  "weight_decay": 0.001
+}

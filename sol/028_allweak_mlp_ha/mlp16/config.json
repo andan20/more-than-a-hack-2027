@@ -1,0 +1,10 @@
+{
+  "name": "mlp16",
+  "kind": "mlp",
+  "hidden": [
+    16
+  ],
+  "dropout": 0.0,
+  "epochs": 80,
+  "weight_decay": 0.001
+}
