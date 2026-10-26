@@ -1,0 +1,48 @@
+{
+  "experiment": "033_event_weighted",
+  "models": [
+    {
+      "name": "logistic_c001",
+      "kind": "logistic",
+      "C": 0.01
+    },
+    {
+      "name": "boost_d3_l7",
+      "kind": "boost",
+      "depth": 3,
+      "leaves": 7,
+      "leaf": 25,
+      "trees": 150,
+      "l2": 2.0
+    }
+  ],
+  "thresholds": [
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    0.95,
+    0.99,
+    0.995
+  ],
+  "training_samples": 11378,
+  "training_D": 2706,
+  "training_LIVE": 8672,
+  "raw_features": 154,
+  "input_width": 217,
+  "event_features": true,
+  "reweighted_weak_labels": true,
+  "effective_weights_sha256": "fb7f734ef486c81140cc513b4454b49ce9196b130b5642adcaff48324a2f0b15",
+  "selection_sha256": "3d679a3290b488347c08163cc43fb0decf6fd32a772542ba4bfe68de0ac77ee5",
+  "public_exclusion": [],
+  "public_inputs_used_for_weak_training": true,
+  "reference_labels_used_for_training": false,
+  "seed": 42,
+  "context": "D: automatic broadcast weak training on all half-block frames INCLUDING public inputs; NO reference labels in fitting; fixed logistic C=.01 and HGB depth3/150 trees; event-feature/weight ablation 031-033; H/A historically public-selected; full offline context; transductive public diagnostics, not independent test",
+  "preprocessing": "training-only median imputation + missing indicators; standardization for logistic",
+  "duration_filter": {
+    "max_live_gap_frames": 10,
+    "min_dead_frames": 25
+  }
+}
